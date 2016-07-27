@@ -15,12 +15,16 @@ pcap_session.on('packet', function (raw_packet) {
 });
 
 
-var macs = [];
+var macs = {};
 function check(ip, mac) {
-    var macStr = mac.map(num => num.toString(16)).join('.');
-    if(!macs.includes(macStr)) {
-        macs.push(macStr);
-        var voice = voices[mac.reduce((prev, cur) => prev + cur, 0) & voices.length];
+    var macStr = mac.map(num => '_' + num.toString(16)).join('_');
+    var now = (new Date()).getTime();
+    if(!macs[macStr] || macs[macStr].date > now + (5 * 60 * 1000)) {
+        macs[macStr] = {
+          mac: mac,
+          date: now,
+        };
+        var voice = voices[mac.reduce((prev, cur) => prev + cur, 0) % voices.length];
         console.log('new device', ip.join('.'), macStr, voice);
         player.play(voice, function(err){
           console.log('Done playing sound.', err);
