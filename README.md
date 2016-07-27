@@ -8,6 +8,12 @@ Tested on a raspberry pi 3.
 ```
 $ clone https://github.com/lexoyo/audio-wifi.git --recursive
 $ sudo npm i
+$ sudo npm start
+```
+
+If npm install throws errors try
+```
+$ sudo npm i
 $ cd node_pcap
 $ npm i
 $ cd ..

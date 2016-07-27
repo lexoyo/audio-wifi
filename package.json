@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "cd node_pcap && npm i && cd ..",
-    "start": "node ."
+    "start": "pm2 start index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "play-sound": "0.0.9",
-    "pcap": "~2.0.1"
+    "pcap": "~2.0.1",
+    "pm2": "~1.1.3"
   }
 }
