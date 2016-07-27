@@ -1,10 +1,10 @@
 {
-  "name": "voices",
+  "name": "audio-wifi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Play a sound for each device connected to the local network, to anounce people when they arrive.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm start",
+    "postinstall": "cd node_pcap && npm i && cd .. && npm start",
     "start": "node ."
   },
   "author": "",
