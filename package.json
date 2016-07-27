@@ -1,0 +1,16 @@
+{
+  "name": "voices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm start",
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "play-sound": "0.0.9",
+    "pcap": "~2.0.1"
+  }
+}

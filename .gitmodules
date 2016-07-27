@@ -1,0 +1,3 @@
+[submodule "node_pcap"]
+	path = node_pcap
+	url = git://github.com/mranney/node_pcap.git
