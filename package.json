@@ -4,7 +4,7 @@
   "description": "Play a sound for each device connected to the local network, to anounce people when they arrive.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd node_pcap && npm i && cd .. && npm start",
+    "postinstall": "cd node_pcap && npm i && cd ..",
     "start": "node ."
   },
   "author": "",
